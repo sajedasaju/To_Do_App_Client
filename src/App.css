@@ -1,0 +1,140 @@
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container{
+  width: 70%;
+ margin: 10% auto;
+ background-color: rgba(95, 185, 201, 0.37);
+ padding: 15px 10px;
+ border-radius: 6px;
+}
+.createButton{
+  background-color: skyblue;
+  border-radius: 50%;
+  padding: 7px 10px;
+  border: none;
+}
+.dataContainer{
+  margin: 20px 10px;
+  padding:20px 10px;
+}
+.formContainer{
+  width: 90%;
+  margin: 16px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+input,select{
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  padding:10px 10px;
+}
+label {
+  padding: 4px 12px 4px 0;
+  display: inline-block;
+}
+input[type=submit] {
+  background-color: #06657c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=submit]:hover {
+  background-color: #06647c9d;
+}
+
+/* start show data css */
+.dataContainer{
+ max-width: 100%;
+}
+
+/* end show data css */
+
+table { 
+	width: 100%; 
+	border-collapse: collapse; 
+	margin:30px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #2e83bdd5; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+td { 
+	font-size: 12px;
+	}
+
+
+
+  @media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
