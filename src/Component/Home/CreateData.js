@@ -41,6 +41,11 @@ axios.post('http://localhost:5000/student', {
         <div>
             
             <div className='container'>
+            <button onClick={navigateToHome} type="button" className='createButton'>
+                <span><i class="uil uil-arrow-left"></i></span>
+            </button>
+
+            
             <form onSubmit={handleSubmit}  className='formContainer'>
              
                 {/* full name */}

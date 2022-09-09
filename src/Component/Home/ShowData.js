@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import usedata from '../../hooks/usedata';
 import ShowDataDetails from './ShowDataDetails';
 
 const ShowData = () => {
+  
     const [allData,setAllData]=useState([]);   
 
 
@@ -13,6 +15,7 @@ useEffect(() => {
     
     })
 }, []);
+
 
     return (
         <div className='dataContainer'>
@@ -26,6 +29,7 @@ useEffect(() => {
       <th>Address</th>
       <th>Student Id</th>
       <th>Dept</th>
+      <th>Activity</th>
     </tr>
   </thead>
   <tbody>
@@ -35,30 +39,7 @@ useEffect(() => {
         student={data}
         ></ShowDataDetails>)
     }
-    {/* <tr>
-      <td data-column="First Name">James</td>
-      <td data-column="Last Name">Matman</td>
-      <td data-column="Job Title">Chief Sandwich Eater</td>
-      <td data-column="Twitter">@james</td>
-      <td data-column="Twitter">@james</td>
-      <td data-column="Twitter">@james</td>
-    </tr>
-    <tr>
-      <td data-column="First Name">James</td>
-      <td data-column="Last Name">Matman</td>
-      <td data-column="Job Title">Chief Sandwich Eater</td>
-      <td data-column="Twitter">@james</td>
-      <td data-column="Twitter">@james</td>
-      <td data-column="Twitter">@james</td>
-    </tr>
-    <tr>
-      <td data-column="First Name">James</td>
-      <td data-column="Last Name">Matman</td>
-      <td data-column="Job Title">Chief Sandwich Eater</td>
-      <td data-column="Twitter">@james</td>
-      <td data-column="Twitter">@james</td>
-      <td data-column="Twitter">@james</td>
-    </tr> */}
+   
   
   </tbody>
 </table>
